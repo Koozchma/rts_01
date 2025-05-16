@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars if canvas is larger than window */
+    background-color: #333; /* Dark background for the game area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make the body take full viewport height */
+}
+
+#game-container {
+    border: 2px solid #555;
+}
+
+#gameCanvas {
+    display: block; /* Removes extra space below the canvas */
+    background-color: #000; /* Black background for the canvas itself */
+}
