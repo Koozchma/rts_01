@@ -3,13 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My RTS Game</title>
+    <title>Clicker RTS Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="game-container">
+        <div id="ui-panel">
+            <h1>My Clicker RTS</h1>
+
+            <div class="resource-display">
+                Gold: <span id="goldDisplay">0</span>
+            </div>
+            <div class="resource-display">
+                Workers: <span id="workerDisplay">0</span> / <span id="housingDisplay">0</span>
+            </div>
+            <div class="resource-display">
+                Science Points: <span id="scienceDisplay">0</span>
+            </div>
+            <div class="resource-display">
+                Military Strength: <span id="militaryDisplay">0</span>
+            </div>
+
+            <hr>
+
+            <h2>Actions</h2>
+            <button id="buyWorkerBtn">Buy Worker (Cost: <span id="workerCostDisplay">10</span> Gold)</button>
+            <button id="buildHouseBtn">Build House (Cost: <span id="houseCostDisplay">50</span> Gold, +<span id="houseCapacityDisplay">5</span> Housing)</button>
+
+            <hr>
+            <h2>Upgrades & Buildings</h2>
+            <button id="upgradeWorkerBtn" disabled>Upgrade Worker Effic. (Cost: <span id="workerUpgradeCostDisplay">100</span> Gold)</button>
+            <button id="buildScienceLabBtn">Build Science Lab (Cost: <span id="scienceLabCostDisplay">200</span> Gold)</button>
+            <button id="buildBarracksBtn">Build Barracks (Cost: <span id="barracksCostDisplay">150</span> Gold)</button>
+            <button id="trainTroopBtn" disabled>Train Troop (Cost: <span id="troopCostDisplay">25</span> Gold, Requires Barracks)</button>
+
+        </div>
+
         <canvas id="gameCanvas"></canvas>
     </div>
+
     <script src="js/game.js"></script>
 </body>
 </html>
