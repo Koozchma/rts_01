@@ -3,45 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicker RTS Project</title>
+    <title>Metropolis Estates</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div id="ui-panel">
-            <h1>My Clicker RTS</h1>
-
-            <div class="resource-display">
-                Gold: <span id="goldDisplay">0</span>
-            </div>
-            <div class="resource-display">
-                Workers: <span id="workerDisplay">0</span> / <span id="housingDisplay">0</span>
-            </div>
-            <div class="resource-display">
-                Science Points: <span id="scienceDisplay">0</span>
-            </div>
-            <div class="resource-display">
-                Military Strength: <span id="militaryDisplay">0</span>
-            </div>
-
-            <hr>
-
-            <h2>Actions</h2>
-            <button id="buyWorkerBtn">Buy Worker (Cost: <span id="workerCostDisplay">10</span> Gold)</button>
-            <button id="buildHouseBtn">Build House (Cost: <span id="houseCostDisplay">50</span> Gold, +<span id="houseCapacityDisplay">5</span> Housing)</button>
-
-            <hr>
-            <h2>Upgrades & Buildings</h2>
-            <button id="upgradeWorkerBtn" disabled>Upgrade Worker Effic. (Cost: <span id="workerUpgradeCostDisplay">100</span> Gold)</button>
-            <button id="buildScienceLabBtn">Build Science Lab (Cost: <span id="scienceLabCostDisplay">200</span> Gold)</button>
-            <button id="buildBarracksBtn">Build Barracks (Cost: <span id="barracksCostDisplay">150</span> Gold)</button>
-            <button id="trainTroopBtn" disabled>Train Troop (Cost: <span id="troopCostDisplay">25</span> Gold, Requires Barracks)</button>
-
+    <header>
+        <h1>Metropolis Estates</h1>
+        <div class="stats-container">
+            <div id="cash-display" class="stat-item">Cash: $0</div>
+            <div id="rps-display" class="stat-item">RPS: $0/s</div>
+            <div id="owned-properties-count" class="stat-item">Properties: 0</div>
         </div>
+    </header>
 
-        <canvas id="gameCanvas"></canvas>
-    </div>
+    <main>
+        <section id="game-messages" class="game-messages-section">
+            <h2>Log</h2>
+            <div id="message-log" class="message-log">
+                Welcome to Metropolis Estates! Start by buying some property.
+            </div>
+        </section>
 
-    <script src="js/game.js"></script>
+        <section id="available-properties-section">
+            <h2>Available Properties</h2>
+            <div id="available-properties-list" class="property-list">
+                </div>
+        </section>
+
+        <section id="owned-properties-section">
+            <h2>My Portfolio</h2>
+            <div id="owned-properties-list" class="property-list">
+                <p>You don't own any properties yet.</p>
+                </div>
+        </section>
+
+        <section id="production-plants-section" style="display:none;">
+            <h2>Production Plants</h2>
+            <div id="production-plants-list">
+                </div>
+        </section>
+
+        <section id="science-facilities-section" style="display:none;">
+            <h2>Science Facilities</h2>
+            <div id="science-facilities-list">
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Metropolis Estates - Alpha v0.0.1</p>
+    </footer>
+
+    <script src="js/properties.js"></script>
+    <script src="js/facilities.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
